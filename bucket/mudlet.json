@@ -1,0 +1,32 @@
+{
+    "version": "4.21.1",
+    "description": "Platform for gaming and enhancing gameplay primarily with MUDs",
+    "homepage": "https://www.mudlet.org/",
+    "license": "GPL-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.mudlet.org/wp-content/files/Mudlet-4.21.1-windows-64-portable.zip",
+            "hash": "87edd2b58dc5df972d1ef88e723783efdfe161a433151eb627c026a86afd41f3",
+            "extract_dir": "portable-CLANG64-release"
+        }
+    },
+    "shortcuts": [
+        [
+            "Mudlet.exe",
+            "Mudlet"
+        ]
+    ],
+    "persist": "portable",
+    "checkver": {
+        "url": "https://www.mudlet.org/download/",
+        "regex": "Mudlet (?<version>[\\d.]+) \\(Windows\\)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.mudlet.org/wp-content/files/Mudlet-$matchVersion-windows-64-portable.zip",
+                "extract_dir": "portable-CLANG64-release"
+            }
+        }
+    }
+}
